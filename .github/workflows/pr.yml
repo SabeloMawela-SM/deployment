@@ -1,0 +1,27 @@
+name: Code Review
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    types: [opened, reopened, synchronize]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anc95/ChatGPT-CodeReview@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PROMPT: "Provide a concise code review with only essential feedback and very brief explanations."
+          # Optional
+          LANGUAGE: English
+          OPENAI_API_ENDPOINT: https://api.openai.com/v1
+          max_tokens: 10000
+          MAX_PATCH_LENGTH: 10000
+          IGNORE_PATTERNS: /node_modules/**/*,*.md
+          INCLUDE_PATTERNS: "*.js,*.ts,*.html,*.css"
