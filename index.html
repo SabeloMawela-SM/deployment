@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="">
+<body class="light-mode">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./assets/light-logo.png" alt="" width="100" height="50" >
-             <span>Two Pot Calculator</span> 
-          </a>
-        </div>
-        <div class="">
-            <i class="bi bi-moon-stars-fill" style="font-size: 30px;"></i>
-            <i class="bi bi-brightness-high-fill d-none" style="font-size: 30px;"></i>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+    <div>
+      <a class="navbar-brand" href="#">
+        <img id="logo" src="./assets/light-logo.png" alt="" width="50" height="50">
+      </a>
+      <span class=" tittle fw-bold fs-2">Two Pot Calculator</span>
+    </div>
+
+    <!-- Light/Dark Mode Toggle -->
+    <div class="d-flex align-items-center position-absolute end-0 me-3">
+        <i id="darkModeToggle" class="bi bi-moon-fill" style="font-size: 30px; cursor: pointer;"></i>
+        <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" style="font-size: 30px; cursor: pointer;"></i>
+    </div>
+
+</nav>
+
+<script src="script.js"></script>
     
 </body>
 </html>
