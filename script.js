@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         enableLightMode();
     });
 
-    function enableDarkMode() {
+    function enableDarkMode()  {
         body.classList.remove("light-mode");
         body.classList.add("dark-mode");
         document.querySelector(".navbar").classList.remove("navbar-light", "bg-light");
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", "dark");
     }
 
-    function enableLightMode() {
+    function enableLightMode()  {
         body.classList.remove("dark-mode");
         body.classList.add("light-mode");
         document.querySelector(".navbar").classList.remove("navbar-dark", "bg-dark");
