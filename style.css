@@ -1,0 +1,26 @@
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+#logo{
+    margin-left: 10px;
+    width: 10%;
+    height: 10%;
+   
+}
+
+.tittle {
+    margin-left: 10px;
+ 
+}
+
+#darkModeToggle, #lightModeToggle{
+    font-size: 2rem;
+    cursor: pointer;
+}
