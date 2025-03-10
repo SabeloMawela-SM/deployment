@@ -12,34 +12,38 @@
     </head>
     
     <body class="light-mode">
-    
-
-      <header class="navbar navbar-expand-lg navbar-light bg-light position-relative">
-        <div>
-          <a class="navbar-brand" href="#">
-            <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo">
-          </a>
-          <span class="tittle fw-bold fs-2">Two Pot Calculator</span>
-        </div>
-
-        <!-- Light/Dark Mode Toggle -->
-        <div class="d-flex align-items-center position-absolute end-0 me-3" >
-          <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
-          <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle dark mode"></i>
-        </div>
-      </header>
+        <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-3">
+            <div class="container-fluid d-flex justify-content-between align-items-center flex-nowrap">
+                <!-- Brand Logo and Title -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo" height="40">
+                    <span class="fw-bold fs-2 ms-2 text-nowrap" style="min-width: 180px;">Two Pot Calculator</span>
+                </a>
+        
+                <!-- Light/Dark Mode Toggle -->
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
+                    <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
+                </div>
+            </div>
+        </header>
+        
+        <main class="hero">
       
-      <div class="heroImg">
-        <h1 class="Intro"><span style="color: darkred;  margin-right: 5px; margin-left: 208px;">Plan Today,</span>Prosper Tomorrow!<span id="intro"></span></h1>
-        <p class="short">Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.</p>
-    </div>
-    <section class="trusted-section">
-        <h2 class="trusted-title">Trusted by the following companies</h2>
-    </section>
+            <div id="heroImg">
+                <h1 class="Intro"><span style="color: darkred;  margin-right: 5px; margin-left: 208px;">Plan Today,</span>Prosper Tomorrow!<span id="intro"></span></h1>
+                <p class="short">Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.</p>
+            </div>
+   
+        
+   
     
-    <section>
+   
+        
        
         <div class="marquee-wrapper">
+                                    
+
             <div class="marquee" id="marquee">
                 <div class="cards">
                     <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
@@ -93,7 +97,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
+
+    <footer>
+
+        <hr>
+
+    <div>
+        Author: CodexTeam<br>
+         Copyright &copy; 2025 Codex. All Rights Reserved.<br>
+        <small><a href="CodexTeam@techbridlefoundation.com">CodexTeam@techbridlefoundation.com</a></small>
+    </div>
+    <small><p>Terms of Use and Privacy Policy</p></small>
+    
+      </footer>
 
 
       <script src="script.js"></script>

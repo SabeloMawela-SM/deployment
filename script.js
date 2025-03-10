@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo");
+    const heroImg = document.getElementById("heroImg");
     
     // Load mode from localStorage
     if (localStorage.getItem("theme") === "dark") {
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         darkModeToggle.classList.add("d-none");
         lightModeToggle.classList.remove("d-none");
 
+        heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
         logo.src = "./assets/dark-logo.png";
         localStorage.setItem("theme", "dark");
     }
@@ -41,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         darkModeToggle.classList.remove("d-none");
         lightModeToggle.classList.add("d-none");
 
+        heroImg.style.backgroundImage = "url('./assets/hero.png')";
         logo.src = "./assets/light-logo.png";
         localStorage.setItem("theme", "light");
     }
