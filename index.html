@@ -29,10 +29,13 @@
         </header>
         
         <main class="hero">
-      
-            <div id="heroImg">
-                <h1 class="Intro"><span style="color: darkred;  margin-right: 5px; margin-left: 208px;">Plan Today,</span>Prosper Tomorrow!<span id="intro"></span></h1>
-                <p class="short">Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.</p>
+            <div id="heroImg" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
+                <h1 class="Intro">
+                    <span class="text-danger">Plan Today,</span> Prosper Tomorrow!
+                </h1>
+                <p class="short">
+                    Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.
+                </p>
             </div>
    
         
@@ -42,8 +45,6 @@
         
        
         <div class="marquee-wrapper">
-                                    
-
             <div class="marquee" id="marquee">
                 <div class="cards">
                     <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
@@ -99,18 +100,18 @@
         </div>
     </main>
 
-    <footer>
-
-        <hr>
-
-    <div>
-        Author: CodexTeam<br>
-         Copyright &copy; 2025 Codex. All Rights Reserved.<br>
-        <small><a href="CodexTeam@techbridlefoundation.com">CodexTeam@techbridlefoundation.com</a></small>
-    </div>
-    <small><p>Terms of Use and Privacy Policy</p></small>
-    
-      </footer>
+    <footer class="container py-4">
+        <div class="d-flex flex-lg-row flex-column gap-3 justify-content-between text-center text-lg-start">
+            <div>
+                <p class="mb-1">Author: CodexTeam</p>
+                <p class="mb-1">Copyright &copy; 2025 Codex. All Rights Reserved.</p>
+            </div>
+            <div class="d-grid gap-2">
+                <small><a href="mailto:CodexTeam@techbridlefoundation.com">CodexTeam@techbridlefoundation.com</a></small>
+                <small><p class="mb-0">Terms of Use and Privacy Policy</p></small>
+            </div>
+        </div>
+    </footer>
 
 
       <script src="script.js"></script>
