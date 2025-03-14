@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo");
     const heroImg = document.getElementById("heroImg");
-    
+
     // Load mode from localStorage
     if (localStorage.getItem("theme") === "dark") {
         enableDarkMode();
@@ -20,54 +20,54 @@ document.addEventListener("DOMContentLoaded", () => {
         enableLightMode();
     });
 
-    function enableDarkMode()  {
+    function enableDarkMode() {
         body.classList.remove("light-mode");
         body.classList.add("dark-mode");
         document.querySelector(".navbar").classList.remove("navbar-light", "bg-light");
         document.querySelector(".navbar").classList.add("navbar-dark", "bg-dark");
-
         darkModeToggle.classList.add("d-none");
         lightModeToggle.classList.remove("d-none");
-
         heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
         logo.src = "./assets/dark-logo.png";
         localStorage.setItem("theme", "dark");
     }
 
-    function enableLightMode()  {
+    function enableLightMode() {
         body.classList.remove("dark-mode");
         body.classList.add("light-mode");
         document.querySelector(".navbar").classList.remove("navbar-dark", "bg-dark");
         document.querySelector(".navbar").classList.add("navbar-light", "bg-light");
-
         darkModeToggle.classList.remove("d-none");
         lightModeToggle.classList.add("d-none");
-
         heroImg.style.backgroundImage = "url('./assets/hero.png')";
         logo.src = "./assets/light-logo.png";
         localStorage.setItem("theme", "light");
     }
 
+    // Form validation and preview logic
     function validateAndPreview() {
         let valid = true;
         let numbers = [];
-        let erroras = ["", "Please enter a valid current age.",
-             "Please enter a valid retirement age greater than current age.",
-             "Please enter a valid gross monthly income.",
-             "Please enter a valid monthly retirement contribution.",
-              "Please enter a valid savings component value",
-              "Please enter a valid withdrawal amount between R2,500 and the savings component value."  ]
-    
+        let errorMessages = [
+            "",
+            "Please enter a valid current age.",
+            "Please enter a valid retirement age greater than current age.",
+            "Please enter a valid gross monthly income.",
+            "Please enter a valid monthly retirement contribution.",
+            "Please enter a valid savings component value.",
+            "Please enter a valid withdrawal amount between R2,500 and the savings component value."
+        ];
+
+        // Loop through each input field for validation
         for (let i = 1; i <= 6; i++) {
             let input = document.getElementById(`number${i}`);
             let error = document.getElementById(`error${i}`);
-            
-    
+
             // Reset previous validation styles and messages
             input.classList.remove("is-invalid");
-    
+
             if (input.value.trim() === "") {
-                error.textContent = erroras[i];
+                error.textContent = errorMessages[i];
                 input.classList.add("is-invalid");
                 valid = false;
             } else {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             valid = false;
                         }
                     }
-    
+
                     // Withdrawal amount validation
                     if (i === 6) {
                         let minWithdrawal = 2500;
@@ -97,12 +97,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             valid = false;
                         }
                     }
-    
+
                     numbers.push(num);
                 }
             }
         }
-    
+
+        // If all inputs are valid, show preview
         if (valid) {
             document.getElementById("previewText").textContent = `You entered: ${numbers.join(", ")}`;
             document.getElementById("previewSection").classList.remove("d-none");
@@ -111,7 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("textId").classList.remove("d-none");
         }
     }
-    
+
+    // Form submission handling (to validate and preview data)
+    document.getElementById("retirementForm").addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form from submitting normally
+        validateAndPreview(); // Call validateAndPreview function
+    });
+
     // Confirm button event
     document.getElementById("confirmButton").addEventListener("click", function () {
         alert("Confirmed! Proceeding...");

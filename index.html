@@ -1,194 +1,185 @@
 <!DOCTYPE html>
+<html lang="en">
 
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content='Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.'>
-      <title>Two Pot Calculator</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-      <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body class="light-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.">
+  <title>Two Pot Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-3">
-            <div class="container-fluid d-flex justify-content-between align-items-center flex-nowrap">
-                <!-- Brand Logo and Title -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo" height="40">
-                    <span class="fw-bold fs-2 ms-2 text-nowrap" style="min-width: 180px;">Two Pot Calculator</span>
-                </a>
-        
-                <!-- Light/Dark Mode Toggle -->
-                <div class="d-flex align-items-center gap-3 ms-auto">
-                    <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
-                    <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
-                </div>
-            </div>
-        </header>
-        
-        <main class="hero">
-            <div id="heroImg" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
-                <h1 class="Intro">
-                    <span class="text-danger">Plan Today,</span> Prosper Tomorrow!
-                </h1>
-                <p class="short">
-                    Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.
-                </p>
+<body class="light-mode">
+    <!-- Header Section-->
+  <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center flex-nowrap">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo" height="40">
+        <span class="fw-bold fs-2 ms-2 text-nowrap" style="min-width: 180px;">Two Pot Calculator</span>
+      </a>
 
-                <h2>Financial Terms</h2>
-    
-                <p>
-                    <b class="text-danger">Savings</b> are the part of your financial account or plan that is specifically set aside for savings or growth.
-                    is essential for building long-term wealth.
-                </p>
-            
-                <p>
-                    <b class="text-danger">Withdrawals</b> refers to the money that a person can take out from their retirement savings before full retirement..
-                   allow you to access your funds when needed or in cases of emergencies.
-                </p>
-            
-                <p>
-                    <b class="text-danger">Retirement Contributions</b>contribution made to a retirement plan, to ensure funds are available after retirement.
-                    are critical for securing your financial future after you retire.
-                </p>
+      <!-- Light/Dark Mode Toggle -->
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
+        <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
+      </div>
+    </div>
+  </header>
 
-            </div>
-            <div class="marquee-wrapper">
-                <div class="marquee" id="marquee">
-                    <div class="cards">
-                        <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/bitcoin-logo-svgrepo-com.svg" alt="Company 2">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/forbes-logo-svgrepo-com.svg" alt="Company 3">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/google-adwords-logo-svgrepo-com.svg" alt="Company 4">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/google-pay-primary-logo-logo-svgrepo-com.svg" alt="Company 5">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/mastercard-4-logo-svgrepo-com.svg" alt="Company 6">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/paypal-logo-svgrepo-com.svg" alt="Company 1">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/visa-4-logo-svgrepo-com.svg" alt="Company 2">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/woocommerce-logo-svgrepo-com.svg" alt="Company 3">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/vodafone-8-logo-svgrepo-com.svg" alt="Company 4">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/ripple-2-logo-svgrepo-com.svg" alt="Company 5">
-                    </div>
-        
-                    <div class="cards">
-                        <img src="./svg/salesforce-2-logo-svgrepo-com.svg" alt="Company 6">
-                    </div>
-                    <div class="cards">
-                        <img src="./svg/visa-4-logo-svgrepo-com.svg" alt="Company 3">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container">
-                <div class="row g-4 pb-4">
-                    <!-- Form Column (Full width on mobile, Half width on desktop) -->
-                    <div class="col-12 col-md-6 pt-4">
-                        <form class="form g-3 needs-validation" novalidate>
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="number1" placeholder="Current age" required>
-                                <label for="number1">Current age</label>
-                                <div class="invalid-feedback" id="error1">Please enter a valid current age.</div>
-                            </div>
-            
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="number2" placeholder="Retirement Age" required>
-                                <label for="number2">Retirement age</label>
-                                <div class="invalid-feedback" id="error2">Please enter a valid retirement age greater than current age.</div>
-                            </div>
-            
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="number3" placeholder="Gross monthly income" required>
-                                <label for="number3">Gross monthly income</label>
-                                <div class="invalid-feedback" id="error3">Please enter a valid gross monthly income.</div>
-                            </div>
-            
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="number4" placeholder="Monthly retirement contribution" required>
-                                <label for="number4">Monthly retirement contribution</label>
-                                <div class="invalid-feedback" id="error4">Please enter a valid monthly retirement contribution.</div>
-                                <p class="info"><i class="bi bi-info-circle-fill"></i> 1/3 of this amount is allocated to the savings component</p>
-                            </div>
-            
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="number5" placeholder="Savings component value" required>
-                                <label for="number5">Savings component value</label>
-                                <div class="invalid-feedback" id="error5">Please enter a valid savings component value.</div>
-                                <p class="info"><i class="bi bi-info-circle-fill"></i> Current estimated savings component value</p>
-                            </div>
-            
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="number6" placeholder="Requested withdrawal amount" required>
-                                <label for="number6">Requested withdrawal amount</label>
-                                <div class="invalid-feedback" id="error6">Please enter a valid withdrawal amount between R2,500 and the savings component value.</div>
-                                <p class="alertMsg">Minimum of R2,500. Maximum cannot exceed the amount in your savings component.</p>
-                            </div>
-            
-                            <div>
-                                <button class="btn btn-primary w-20" type="button" onclick="validateAndPreview()">Calculate</button>
-                            </div>
-                        </form>
-                    </div>
-            
-                    <!-- Preview Section (Hidden on Mobile, Shown on Desktop) -->
-                    <div class="col-md-6 d-none d-md-block">
-                        <div id="previewSection" class="showResult mt-4">
-                            <p id="previewText" class="fw-bold"></p>
-                            <img id="imgId" class="screenContent d-block w-100" src="assets/two-pot-graph-image.png" alt="Two-Pot Graph">
-                            <p id="textId" class="screenContent d-block">See how much estimated tax will be on your withdrawal</p>
-                            <button id="confirmButton" class="btn btn-success d-none">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </main>
+  <main class="hero">
+    <div id="heroImg" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
+      <h1 class="Intro">
+        <span class="text-danger">Plan Today,</span> Prosper Tomorrow!
+      </h1>
+      <p class="short">
+        Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.
+      </p>
+      <h2>Financial Terms</h2>
 
-    <footer class="container py-4">
-        <div class="d-flex flex-lg-row flex-column gap-3 justify-content-between text-center text-lg-start">
-            <div>
-                <p class="mb-1">Author: CodexTeam</p>
-                <p class="mb-1">Copyright &copy; 2025 Codex. All Rights Reserved.</p>
-            </div>
-            <div class="d-grid gap-2">
-                <small><a href="mailto:CodexTeam@techbridlefoundation.com">CodexTeam@techbridlefoundation.com</a></small>
-                <small><p class="mb-0">Terms of Use and Privacy Policy</p></small>
-            </div>
+      <p>
+        <b class="text-danger">Savings</b> are the part of your financial account or plan specifically set aside for growth, essential for building long-term wealth.
+      </p>
+
+      <p>
+        <b class="text-danger">Withdrawals</b> refer to the money that can be taken out from your retirement savings before full retirement, providing access to funds during emergencies or financial needs.
+      </p>
+
+      <p>
+        <b class="text-danger">Retirement Contributions</b> are contributions made to a retirement plan to ensure funds are available after retirement. These are critical for securing your financial future.
+      </p>
+    </div>
+
+    <div class="marquee-wrapper">
+      <div class="marquee" id="marquee">
+        <div class="cards">
+          <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
         </div>
-    </footer>
 
+        <div class="cards">
+          <img src="./svg/bitcoin-logo-svgrepo-com.svg" alt="Company 2">
+        </div>
 
-      <script src="script.js"></script>
-    </body>
-  </html>
+        <div class="cards">
+          <img src="./svg/forbes-logo-svgrepo-com.svg" alt="Company 3">
+        </div>
 
+        <div class="cards">
+          <img src="./svg/google-adwords-logo-svgrepo-com.svg" alt="Company 4">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/google-pay-primary-logo-logo-svgrepo-com.svg" alt="Company 5">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/mastercard-4-logo-svgrepo-com.svg" alt="Company 6">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/paypal-logo-svgrepo-com.svg" alt="Company 7">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/visa-4-logo-svgrepo-com.svg" alt="Company 8">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/woocommerce-logo-svgrepo-com.svg" alt="Company 9">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/vodafone-8-logo-svgrepo-com.svg" alt="Company 10">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/ripple-2-logo-svgrepo-com.svg" alt="Company 11">
+        </div>
+
+        <div class="cards">
+          <img src="./svg/salesforce-2-logo-svgrepo-com.svg" alt="Company 12">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <!-- Form Column -->
+        <div class="col-12 col-md-6 pt-4" id="retirementForm">
+          <form class="form g-3 needs-validation" novalidate>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="number1" placeholder="Current age" required>
+              <label for="number1">Current Age</label>
+              <div class="invalid-feedback" id="error1">Please enter a valid current age.</div>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="number2" placeholder="Retirement Age" required>
+              <label for="number2">Retirement Age</label>
+              <div class="invalid-feedback" id="error2">Please enter a valid retirement age greater than current age.</div>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="number3" placeholder="Gross Monthly Income" required>
+              <label for="number3">Gross Monthly Income</label>
+              <div class="invalid-feedback" id="error3">Please enter a valid gross monthly income.</div>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="number4" placeholder="Monthly Retirement Contribution" required>
+              <label for="number4">Monthly Retirement Contribution</label>
+              <div class="invalid-feedback" id="error4">Please enter a valid monthly retirement contribution.</div>
+              <p class="info"><i class="bi bi-info-circle-fill"></i> 1/3 of this amount is allocated to the savings component</p>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="number5" placeholder="Savings Component Value" required>
+              <label for="number5">Savings Component Value</label>
+              <div class="invalid-feedback" id="error5">Please enter a valid savings component value.</div>
+              <p class="info"><i class="bi bi-info-circle-fill"></i> Current estimated savings component value</p>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="number6" placeholder="Requested Withdrawal Amount" required>
+              <label for="number6">Requested Withdrawal Amount</label>
+              <div class="invalid-feedback" id="error6">Please enter a valid withdrawal amount between R2,500 and the savings component value.</div>
+              <p class="alertMsg">Minimum of R2,500. Maximum cannot exceed the amount in your savings component.</p>
+            </div>
+
+            <div>
+                <button class="btn btn-primary w-20" type="submit">Calculate</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="col-md-6 d-none d-md-block">
+          <div id="previewSection" class="showResult mt-4">
+            <p id="previewText" class="fw-bold"></p>
+            <img id="imgId" class="screenContent d-block w-100" src="assets/two-pot-graph-image.png" alt="Two-Pot Graph">
+            <p id="textId" class="screenContent d-block">See how much estimated tax will be on your withdrawal</p>
+            <button id="confirmButton" class="btn btn-success d-none">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container py-4">
+    <div class="d-flex flex-lg-row flex-column gap-3 justify-content-between text-center text-lg-start">
+      <div>
+        <p class="mb-1">Author: CodexTeam</p>
+        <p class="mb-1">Copyright &copy; 2025 Codex. All Rights Reserved.</p>
+      </div>
+      <div class="d-grid gap-2">
+        <small><a href="mailto:CodexTeam@techbridlefoundation.com">CodexTeam@techbridlefoundation.com</a></small>
+        <small><p class="mb-0">Terms of Use and Privacy Policy</p></small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
