@@ -35,8 +35,6 @@
         /*position: relative;*/
       }
 
-     /* .Intro{
-        color: white;
 
       }
       .short{
@@ -122,9 +120,11 @@
             color: rgb(107, 105, 105);
         }
         .info{
+
             color: black;
             background-color: rgb(242, 246, 248);
             height: 2rem;
+            
             border: 1px solid rgb(242, 246, 248);
             padding-left: 10px;
             border-left: 4px solid #007bff;
@@ -150,4 +150,3 @@
             height: 100%;
             width: 100%;
         }
-
