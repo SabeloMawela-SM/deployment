@@ -1,157 +1,140 @@
+/* Light and Dark Mode Styles */
 .dark-mode {
     background-color: #121212;
     color: white;
 }
-
 .light-mode {
     background-color: white;
     color: black;
 }
 
-#logo{
+/* Logo Styling */
+#logo {
     margin-left: 10px;
     width: 10%;
     height: 10%;
-   
 }
 
-.tittle {
-    margin-left: 10px;
- 
-}
-
-#darkModeToggle, #lightModeToggle{
+/* Header Styling */
+#darkModeToggle, #lightModeToggle {
     font-size: 2rem;
     cursor: pointer;
 }
 
-.heroImg {
-
+/* Hero Section Styling */
+#heroImg {
     background-image: url("./assets/hero.png");
-        padding: 190px;
-        height: 150px;   
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-      }
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-      .Intro1{
-        color: white;
+/* Marquee Section */
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
 
-      }
-      .short{
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-      }
-      section {
-        width: 100%;
-        overflow: hidden;
-        background: white;
-        padding: 20px 0;
-        /* border: 1px solid #ddd; */
-        /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
+.marquee {
+    display: flex;
+    gap: 20px;
+    animation: marquee 10s linear infinite;
+    min-width: 200%;
+}
 
-    .marquee-wrapper {
-        display: flex;
-        overflow: hidden;
-        white-space: nowrap;
-        width: 100%;
-    }
+.cards {
+    width: 200px;
+    height: 100px;
+    border-radius: none;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0;
+}
 
-    .marquee {
-        display: flex;
-        gap: 20px;
-        animation: marquee 10s linear infinite;
-        min-width: 200%;
-    }
+.cards img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
 
-    .cards {
-        width: 200px;
-        height: 100px;
-        background: #fff;
-        border-radius: None; 
-        padding: 15px;
-        text-align: center;
-        flex-shrink: 0;
+/* Keyframes for Marquee Animation */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
     }
+    to {
+        transform: translateX(-50%);
+    }
+}
 
-    .cards img {
-        width: 80px; 
-        height: auto;
-        margin-bottom: 10px;
-    }
+/* Main Container Layout */
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px;
+}
 
-    
-    @keyframes marquee {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-50%);
-        }
-    }
+/* Form Control Styling */
+.form-control {
+    height: 3rem;
+}
 
-    .trusted-section {
-        text-align: center;
-    padding: 20px 0;
-    background: white;
-    display: contents;
-    margin-top: 142px;
-    }
-    
-    .trusted-title {
-        font-family: sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        color: darkred;
-    }
-    .mainContainer{
-        display: grid;
+.form-floating label {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(107, 105, 105);
+}
+
+/* Info Text Styling (Updated Class Naming) */
+.form-validation-message {
+    color: black;
+    background-color: rgb(242, 246, 248);
+    height: 2rem;
+    border: 1px solid rgb(242, 246, 248);
+    padding-left: 10px;
+    border-left: 4px solid var(--primary-color);  /* Use variable for primary color */
+}
+
+/* Icon Styling */
+.bi {
+    color: var(--primary-color);
+}
+
+/* Alert Message Styling */
+.alertMsg {
+    font-size: 12px;
+    color: rgb(131, 125, 125);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hover Styling for Form Inputs */
+.form-control:hover {
+    border: 3px solid rgb(99, 99, 245);
+}
+
+/* Result Section Styling */
+.showResult {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .mainContainer {
         grid-template-columns: 1fr 1fr;
-        margin: 50px;
-            
-        }
-        .form-control{
-        height: 3rem;
-        width: 30rem;
-        }
-        .form-floating label{
-            font-size: 18px;
-            font-weight:500;
-            color: rgb(107, 105, 105);
-        }
-        .info{
-            background-color: rgb(242, 246, 248);
-            height: 2rem;
-            width: 30rem;
-            border: 1px solid rgb(242, 246, 248);
-            padding-left: 10px;
-            border-left: 4px solid #007bff;
-        }
-        .bi{
-            color:#007bff;
-        }
-        .alertMsg{
-            font-size: 12px;
-            color: rgb(131, 125, 125);
-            font-family:Arial, Helvetica, sans-serif;
-        
-        }
-        :hover.form-control{
-            border: 3px solid rgb(99, 99, 245);
-        }
-        .showResult{
-            display: grid;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            border: 1px solid black;
-            height: 100%;
-            width: 100%;
-        }
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        grid-template-columns: 1fr; /* Stacked layout on smaller screens */
+    }
+}

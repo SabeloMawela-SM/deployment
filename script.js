@@ -3,115 +3,114 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo");
-    
-    // Load mode from localStorage
-    if (localStorage.getItem("theme") === "dark") {
-        enableDarkMode();
-    } else {
-        enableLightMode();
-    }
+    const heroImg = document.getElementById("heroImg");
 
-    darkModeToggle.addEventListener("click", () => {
-        enableDarkMode();
-    });
+    const navbar = document.querySelector(".navbar");
+    const previewSection = document.getElementById("previewSection");
+    const confirmButton = document.getElementById("confirmButton");
+    const imgId = document.getElementById("imgId");
+    const textId = document.getElementById("textId");
 
-    lightModeToggle.addEventListener("click", () => {
-        enableLightMode();
-    });
+    const MIN_WITHDRAWAL = 2500;
+    const INPUT_IDS = [1, 2, 3, 4, 5, 6];
 
-    function enableDarkMode()  {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-        document.querySelector(".navbar").classList.remove("navbar-light", "bg-light");
-        document.querySelector(".navbar").classList.add("navbar-dark", "bg-dark");
+    const errorMessages = {
+        1: "Please enter a valid current age.",
+        2: "Please enter a valid retirement age greater than current age.",
+        3: "Please enter a valid gross monthly income.",
+        4: "Please enter a valid monthly retirement contribution.",
+        5: "Please enter a valid savings component value.",
+        6: "Please enter a valid withdrawal amount between R2,500 and the savings component value."
+    };
 
+    // Initialize theme based on localStorage
+    localStorage.getItem("theme") === "dark" ? enableDarkMode() : enableLightMode();
+
+    darkModeToggle?.addEventListener("click", enableDarkMode);
+    lightModeToggle?.addEventListener("click", enableLightMode);
+
+    function enableDarkMode() {
+        body.classList.replace("light-mode", "dark-mode");
+        navbar.classList.replace("navbar-light", "navbar-dark");
+        navbar.classList.replace("bg-light", "bg-dark");
         darkModeToggle.classList.add("d-none");
         lightModeToggle.classList.remove("d-none");
-
+        heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
         logo.src = "./assets/dark-logo.png";
         localStorage.setItem("theme", "dark");
     }
 
-    function enableLightMode()  {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        document.querySelector(".navbar").classList.remove("navbar-dark", "bg-dark");
-        document.querySelector(".navbar").classList.add("navbar-light", "bg-light");
-
+    function enableLightMode() {
+        body.classList.replace("dark-mode", "light-mode");
+        navbar.classList.replace("navbar-dark", "navbar-light");
+        navbar.classList.replace("bg-dark", "bg-light");
         darkModeToggle.classList.remove("d-none");
         lightModeToggle.classList.add("d-none");
-
+        heroImg.style.backgroundImage = "url('./assets/hero.png')";
         logo.src = "./assets/light-logo.png";
         localStorage.setItem("theme", "light");
     }
-});
 
-function validateAndPreview() {
-    let valid = true;
-    let numbers = [];
-    let erroras = ["", "Please enter a valid current age.",
-         "Please enter a valid retirement age greater than current age.",
-         "Please enter a valid gross monthly income.",
-         "Please enter a valid monthly retirement contribution.",
-          "Please enter a valid savings component value",
-          "Please enter a valid withdrawal amount between R2,500 and the savings component value."  ]
+    function handleValidation(input, error, message) {
+        input.classList.add("is-invalid");
+        error.textContent = message;
+    }
 
-    for (let i = 1; i <= 6; i++) {
-        let input = document.getElementById(`number${i}`);
-        let error = document.getElementById(`error${i}`);
-        
+    function validateAndPreview() {
+        let valid = true;
+        let numbers = [];
 
-        // Reset previous validation styles and messages
-        input.classList.remove("is-invalid");
+        INPUT_IDS.forEach((id) => {
+            const input = document.getElementById(`number${id}`);
+            const error = document.getElementById(`error${id}`);
+            input.classList.remove("is-invalid");
+            error.textContent = "";
 
-        if (input.value.trim() === "") {
-            error.textContent = erroras[i];
-            input.classList.add("is-invalid");
-            valid = false;
-        } else {
-            let num = Number(input.value);
-            if (isNaN(num)) {
-                error.textContent = "Invalid number.";
-                input.classList.add("is-invalid");
+            let value = input.value.trim();
+            let num = Number(value);
+
+            if (!value || isNaN(num)) {
+                handleValidation(input, error, "Invalid number.");
                 valid = false;
-            } else {
-                // Retirement Age validation (should be greater than Current Age)
-                if (i === 2) {
-                    let currentAge = Number(document.getElementById("number1").value);
-                    if (num <= currentAge) {
-                        error.textContent = "Retirement age must be greater than current age.";
-                        input.classList.add("is-invalid");
-                        valid = false;
-                    }
-                }
-
-                // Withdrawal amount validation
-                if (i === 6) {
-                    let minWithdrawal = 2500;
-                    let maxWithdrawal = Number(document.getElementById("number5").value);
-                    if (num < minWithdrawal || num > maxWithdrawal) {
-                        error.textContent = `Amount must be between R${minWithdrawal} and R${maxWithdrawal}.`;
-                        input.classList.add("is-invalid");
-                        valid = false;
-                    }
-                }
-
-                numbers.push(num);
+                return;
             }
+
+            if (id === 2) {
+                let currentAge = Number(document.getElementById("number1").value);
+                if (num <= currentAge) {
+                    handleValidation(input, error, "Retirement age must be greater than current age.");
+                    valid = false;
+                    return;
+                }
+            }
+
+            if (id === 6) {
+                let maxWithdrawal = Number(document.getElementById("number5").value);
+                if (num < MIN_WITHDRAWAL || num > maxWithdrawal) {
+                    handleValidation(input, error, `Amount must be between R${MIN_WITHDRAWAL} and R${maxWithdrawal}.`);
+                    valid = false;
+                    return;
+                }
+            }
+
+            numbers.push(num);
+        });
+
+        if (valid) {
+            document.getElementById("previewText").textContent = `You entered: ${numbers.join(", ")}`;
+            previewSection.classList.remove("d-none");
+            confirmButton.classList.remove("d-none");
+            imgId.classList.remove("d-none");
+            textId.classList.remove("d-none");
         }
     }
 
-    if (valid) {
-        document.getElementById("previewText").textContent = `You entered: ${numbers.join(", ")}`;
-        document.getElementById("previewSection").classList.remove("d-none");
-        document.getElementById("confirmButton").classList.remove("d-none");
-        document.getElementById("imgId").classList.remove("d-none");
-        document.getElementById("textId").classList.remove("d-none");
-    }
-}
+    document.getElementById("retirementForm")?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        validateAndPreview();
+    });
 
-// Confirm button event
-document.getElementById("confirmButton").addEventListener("click", function () {
-    alert("Confirmed! Proceeding...");
+    confirmButton?.addEventListener("click", () => {
+        alert("Confirmed! Proceeding...");
+    });
 });
-
