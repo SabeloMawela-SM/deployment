@@ -9,7 +9,7 @@
 }
 
 .navbar {
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
     padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -112,6 +112,7 @@
 }
 
 #darkModeToggle, #lightModeToggle {
+    color: #1d4ed8;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -169,13 +170,28 @@
 /* Hero Section Styling */
 #heroImg {
     background-image: url("./assets/hero.png");
-   height: 70vh !important;
+   height: 65vh !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .short{
     font-weight: 600;
+}
+
+.trusted-section {
+    text-align: center;
+padding: 20px 0;
+background: white;
+display: contents;
+margin-top: 142px;
+}
+
+.trusted-title {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #dc3545;
 }
 
 /* Marquee Section */
