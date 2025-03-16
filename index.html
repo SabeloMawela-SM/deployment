@@ -13,22 +13,41 @@
 
 <body class="light-mode">
     <!-- Header Section-->
-  <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-3">
-    <div class="container-fluid d-flex justify-content-between align-items-center flex-nowrap">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo" height="40">
-        <span class="fw-bold fs-2 ms-2 text-nowrap" style="min-width: 180px;">Two Pot Calculator</span>
-      </a>
+    <nav class="navbar">
+        <div class="container">
+            
+            <a href="#" class="logo">
+                <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo">
+                <span class="title">Two Pot Calculator</span>
+            </a>
 
-      <!-- Light/Dark Mode Toggle -->
-      <div class="d-flex align-items-center gap-3 ms-auto">
-        <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
-        <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
-      </div>
-    </div>
-  </header>
+            
+            <div  class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
 
-  <main class="hero">
+            <!-- Dark Mode Toggle -->
+            <div class="nav-buttons">
+                <div class="dark-mode-toggle">
+                    <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
+                    <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
+                </div>
+                <button class="menu-toggle" aria-controls="navbar-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="menu-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+  <main id="home"  class="hero">
     <div id="heroImg" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
       <h1 class="Intro">
         <span class="text-danger">Plan Today,</span> Prosper Tomorrow!
@@ -36,22 +55,11 @@
       <p class="short">
         Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.
       </p>
-      <h2>Financial Terms</h2>
-
-      <p>
-        <b class="text-danger">Savings</b> are the part of your financial account or plan specifically set aside for growth, essential for building long-term wealth.
-      </p>
-
-      <p>
-        <b class="text-danger">Withdrawals</b> refer to the money that can be taken out from your retirement savings before full retirement, providing access to funds during emergencies or financial needs.
-      </p>
-
-      <p>
-        <b class="text-danger">Retirement Contributions</b> are contributions made to a retirement plan to ensure funds are available after retirement. These are critical for securing your financial future.
-      </p>
+      
     </div>
+    
 
-    <div class="marquee-wrapper">
+    <div id="About" class="marquee-wrapper">
       <div class="marquee" id="marquee">
         <div class="cards">
           <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
@@ -103,7 +111,27 @@
       </div>
     </div>
 
-    <div class="container">
+   
+<section id="About">
+    <h2 class="about">Plan Your Retirement with Confidence</h2>
+    <p class="about">
+        <b class="text-danger">The Two-Pot Retirement Calculator</b> is designed to help individuals understand and manage their retirement savings effectively. It provides insights into </p>
+    <p class= "about">
+      <b class="text-danger">Savings</b>, which are crucial for long-term financial growth, and
+    </p>
+
+    <p class= "about">
+      <b class="text-danger">Withdrawals</b> ensuring access to funds when needed before full retirement. Additionally, it emphasizes the importance of 
+    </p>
+
+    <p class= "about">
+      <b class="text-danger">Retirement Contributions</b>helping users plan for a secure and comfortable future. By balancing these components, this calculator empowers users
+    </p>
+    <p class= "about"> to make informed financial decisions tailored to their retirement goals. </p>
+</section>
+    
+
+    <div id="service" class="container">
       <div class="row g-4 pb-4">
         <!-- Form Column -->
         <div class="col-12 col-md-6 pt-4" id="retirementForm">
@@ -166,18 +194,28 @@
     </div>
   </main>
 
-  <footer class="container py-4">
-    <div class="d-flex flex-lg-row flex-column gap-3 justify-content-between text-center text-lg-start">
-      <div>
-        <p class="mb-1">Author: CodexTeam</p>
-        <p class="mb-1">Copyright &copy; 2025 Codex. All Rights Reserved.</p>
-      </div>
-      <div class="d-grid gap-2">
-        <small><a href="mailto:CodexTeam@techbridlefoundation.com">CodexTeam@techbridlefoundation.com</a></small>
-        <small><p class="mb-0">Terms of Use and Privacy Policy</p></small>
-      </div>
+  <footer id="contact" class="footer">
+    <div class="Container">
+        <div class="footer-top">
+            <a href="#" class="Logo">
+                <img id="Logo" src="./assets/light-logo.png" alt="Logo" />
+                <span>Two Pot Calculator</span>
+            </a>
+            <ul class="footer-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Licensing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <hr class="divider">
+        <div class="footer-info">
+            <p>Author: CodexTeam</p>
+            <p>Copyright &copy; 2025 Codex. All Rights Reserved.</p>
+        </div>
+       
     </div>
-  </footer>
+</footer>
 
   <script src="script.js"></script>
 </body>

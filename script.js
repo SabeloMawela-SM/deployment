@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo");
+    const Logo =document.getElementById("Logo")
     const heroImg = document.getElementById("heroImg");
 
     // Load mode from localStorage
@@ -25,10 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.add("dark-mode");
         document.querySelector(".navbar").classList.remove("navbar-light", "bg-light");
         document.querySelector(".navbar").classList.add("navbar-dark", "bg-dark");
+        document.querySelector(".footer").classList.remove("footer-light", "bg-light");
+        document.querySelector(".footer").classList.add("footer-dark", "bg-dark");
         darkModeToggle.classList.add("d-none");
         lightModeToggle.classList.remove("d-none");
         heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
         logo.src = "./assets/dark-logo.png";
+        Logo.src="./assets/dark-logo.png" ;
         localStorage.setItem("theme", "dark");
     }
 
@@ -37,10 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.add("light-mode");
         document.querySelector(".navbar").classList.remove("navbar-dark", "bg-dark");
         document.querySelector(".navbar").classList.add("navbar-light", "bg-light");
+        document.querySelector(".footer").classList.remove("footer-dark", "bg-dark");
+        document.querySelector(".footer").classList.add("footer-light", "bg-light");
         darkModeToggle.classList.remove("d-none");
         lightModeToggle.classList.add("d-none");
         heroImg.style.backgroundImage = "url('./assets/hero.png')";
         logo.src = "./assets/light-logo.png";
+        Logo.src= "./assets/light-logo.png";
         localStorage.setItem("theme", "light");
     }
 
