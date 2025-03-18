@@ -1,226 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.">
-  <title>Two Pot Calculator</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CodexTeam">
+    <meta name="description" content="Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.">
+    <title>Two Pot Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<body class="light-mode">
+  <body class="light-mode">
     <!-- Header Section-->
-    <nav class="navbar">
-        <div class="container">
-            
-            <a href="#" class="logo">
-                <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo">
-                <span class="title">Two Pot Calculator</span>
-            </a>
-
-            
-            <div  class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Dark Mode Toggle -->
-            <div class="nav-buttons">
-                <div class="dark-mode-toggle">
-                    <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
-                    <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
-                </div>
-                <button class="menu-toggle" aria-controls="navbar-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="menu-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </button>
-            </div>
+    <header class="navbar bg-light fixed-top">
+      <div class="container">
+        <a href="#" class="logo">
+          <img id="logo" src="./assets/light-logo.png" alt="Two Pot Calculator Logo">
+          <span class="title">Two Pot Calculator</span>
+        </a>
+  
+        <div class="nav-menu bg-light" id="navbarNav">
+        <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#About" class="nav-link">About</a></li>
+            <li><a href="#service" class="nav-link">Services</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+          </ul>
         </div>
-    </nav>
-
-  <main id="home"  class="hero">
-    <div id="heroImg" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
-      <h1 class="Intro">
-        <span class="text-danger">Plan Today,</span> Prosper Tomorrow!
-      </h1>
-      <p class="short">
-        Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.
-      </p>
-      
-    </div>
-    <section class="trusted-section">
-        <h2 class="trusted-title">Trusted by the following companies</h2>
-    </section>
     
-
-    <div id="About" class="marquee-wrapper">
-      <div class="marquee" id="marquee">
-        <div class="cards">
-          <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/bitcoin-logo-svgrepo-com.svg" alt="Company 2">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/forbes-logo-svgrepo-com.svg" alt="Company 3">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/google-adwords-logo-svgrepo-com.svg" alt="Company 4">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/google-pay-primary-logo-logo-svgrepo-com.svg" alt="Company 5">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/mastercard-4-logo-svgrepo-com.svg" alt="Company 6">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/paypal-logo-svgrepo-com.svg" alt="Company 7">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/visa-4-logo-svgrepo-com.svg" alt="Company 8">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/woocommerce-logo-svgrepo-com.svg" alt="Company 9">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/vodafone-8-logo-svgrepo-com.svg" alt="Company 10">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/ripple-2-logo-svgrepo-com.svg" alt="Company 11">
-        </div>
-
-        <div class="cards">
-          <img src="./svg/salesforce-2-logo-svgrepo-com.svg" alt="Company 12">
-        </div>
-      </div>
-    </div>
-
-   
-<section id="about">
-    <h2 class="about">Plan Your Retirement with Confidence</h2>
-    <p class="about">
-        <b class="text-danger">The Two-Pot Retirement Calculator</b> is designed to help individuals understand and manage their retirement savings effectively. It provides insights into </p>
-    <p class= "about">
-      <b class="text-danger">Savings</b>, which are crucial for long-term financial growth, and
-    </p>
-
-    <p class= "about">
-      <b class="text-danger">Withdrawals</b> ensuring access to funds when needed before full retirement. Additionally, it emphasizes the importance of 
-    </p>
-
-    <p class= "about">
-      <b class="text-danger">Retirement Contributions</b>helping users plan for a secure and comfortable future. By balancing these components, this calculator empowers users
-    </p>
-    <p class= "about"> to make informed financial decisions tailored to their retirement goals. </p>
-</section>
-    
-
-    <div id="service" class="container">
-      <div class="row g-4 pb-4">
-        <!-- Form Column -->
-        <div class="col-12 col-md-6 pt-4" id="retirementForm">
-          <form class="form g-3 needs-validation" novalidate>
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="number1" placeholder="Current age" required>
-              <label for="number1">Current Age</label>
-              <div class="invalid-feedback" id="error1">Please enter a valid current age.</div>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="number2" placeholder="Retirement Age" required>
-              <label for="number2">Retirement Age</label>
-              <div class="invalid-feedback" id="error2">Please enter a valid retirement age greater than current age.</div>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="number3" placeholder="Gross Monthly Income" required>
-              <label for="number3">Gross Monthly Income</label>
-              <div class="invalid-feedback" id="error3">Please enter a valid gross monthly income.</div>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="number4" placeholder="Monthly Retirement Contribution" required>
-              <label for="number4">Monthly Retirement Contribution</label>
-              <div class="invalid-feedback" id="error4">Please enter a valid monthly retirement contribution.</div>
-              <p class="info"><i class="bi bi-info-circle-fill"></i> 1/3 of this amount is allocated to the savings component</p>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="number5" placeholder="Savings Component Value" required>
-              <label for="number5">Savings Component Value</label>
-              <div class="invalid-feedback" id="error5">Please enter a valid savings component value.</div>
-              <p class="info"><i class="bi bi-info-circle-fill"></i> Current estimated savings component value</p>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="number6" placeholder="Requested Withdrawal Amount" required>
-              <label for="number6">Requested Withdrawal Amount</label>
-              <div class="invalid-feedback" id="error6">Please enter a valid withdrawal amount between R2,500 and the savings component value.</div>
-              <p class="alertMsg">Minimum of R2,500. Maximum cannot exceed the amount in your savings component.</p>
-            </div>
-
-            <div>
-                <button class="btn btn-primary w-20" type="submit">Calculate</button>
-            </div>
-          </form>
-        </div>
-
-        <!-- Preview Section -->
-        <div class="col-md-6 d-none d-md-block">
-          <div id="previewSection" class="showResult mt-4">
-            <p id="previewText" class="fw-bold"></p>
-            <img id="imgId" class="screenContent d-block w-100" src="assets/two-pot-graph-image.png" alt="Two-Pot Graph">
-            <p id="textId" class="screenContent d-block">See how much estimated tax will be on your withdrawal</p>
-            <button id="confirmButton" class="btn btn-success d-none">Confirm</button>
+        <div class="nav-buttons">
+          <div class="dark-mode-toggle" id="Toggle">
+            <i id="darkModeToggle" class="bi bi-moon-fill" aria-label="Toggle dark mode"></i>
+            <i id="lightModeToggle" class="bi bi-brightness-high-fill d-none" aria-label="Toggle light mode"></i>
           </div>
+          <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbarNav">
+            <span class="menu-icon fs-2">&#9776;</span> 
+        </button>
+        <button class="menu-toggle" id="menuClose" aria-label="Close menu" style="display: none;">
+            <span class="menu-icon fs-1">&times;</span> 
+        </button>
+        </div>
+      </div>
+    </header>
+    
+    <!--Main Section-->
+    <main id="home"  class="hero">
+      <section id="heroImg" class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
+        <h1 class="Intro">
+          <span class="text-danger">Plan Today,</span> Prosper Tomorrow!
+        </h1>
+        <p class="short">
+          Calculate how your retirement savings are split between accessible and long-term funds with the Two-Pot Investment System.
+        </p>
+      </section>
+
+      <section class="trusted-section"id="about">
+      <h2 class="trusted-title mt-5 text-center">Trusted by the following companies</h2>
+        <div id="About" class="marquee-wrapper">
+            <div class="marquee" id="marquee">
+                <div class="cards">
+                    <img src="./svg/aws-logo-logo-svgrepo-com.svg" alt="Company 1">
+                </div>
+                <div class="cards">
+                    <img src="./svg/bitcoin-logo-svgrepo-com.svg" alt="Company 2">
+                </div>
+                <div class="cards">
+                    <img src="./svg/forbes-logo-svgrepo-com.svg" alt="Company 3">
+                </div>
+                <div class="cards">
+                    <img src="./svg/google-adwords-logo-svgrepo-com.svg" alt="Company 4">
+                </div>
+                <div class="cards">
+                    <img src="./svg/google-pay-primary-logo-logo-svgrepo-com.svg" alt="Company 5">
+                </div>
+                <div class="cards">
+                    <img src="./svg/mastercard-4-logo-svgrepo-com.svg" alt="Company 6">
+                </div>
+                <div class="cards">
+                    <img src="./svg/paypal-logo-svgrepo-com.svg" alt="Company 7">
+                </div>
+                <div class="cards">
+                    <img src="./svg/visa-4-logo-svgrepo-com.svg" alt="Company 8">
+                </div>
+                <div class="cards">
+                    <img src="./svg/woocommerce-logo-svgrepo-com.svg" alt="Company 9">
+                </div>
+                <div class="cards">
+                    <img src="./svg/vodafone-8-logo-svgrepo-com.svg" alt="Company 10">
+                </div>
+                <div class="cards">
+                    <img src="./svg/ripple-2-logo-svgrepo-com.svg" alt="Company 11">
+                </div>
+                <div class="cards">
+                    <img src="./svg/salesforce-2-logo-svgrepo-com.svg" alt="Company 12">
+                </div>
+            </div>
+        </div>
+  
+    
+        <div class=" px-5 py-5 w-100">
+          <h2 class="about">Plan Your Retirement with Confidence</h2>
+          <p>
+              <b class="text-danger">The Two-Pot Retirement Calculator</b> is designed to help individuals understand and manage their retirement savings effectively.
+              It provides insights into <b class="text-danger">Savings</b>, which are crucial for long-term financial growth, and
+              <b class="text-danger">Withdrawals</b> ensuring access to funds when needed before full retirement. Additionally,
+              it emphasizes the importance of <b class="text-danger">Retirement Contributions</b> helping users plan for a secure and comfortable future. By balancing these components, this calculator empowers users
+              to make informed financial decisions tailored to their retirement goals.
+          </p>
+
+        </div>
+       
+      </section>
+      <section id="service" class="container">
+        <div class="row g-4 pb-4 w-100">
+          <div class="col-12 col-md-6  pt-4" id="retirementForm">
+            <form class="form g-3 needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="number1" placeholder="Current age" required>
+                <label for="number1">Current Age</label>
+                <div class="invalid-feedback" id="error1">Please enter a valid current age.</div>
+              </div><div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number2" placeholder="Retirement Age" required>
+            <label for="number2">Retirement Age</label>
+            <div class="invalid-feedback" id="error2">Please enter a valid retirement age greater than current age.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number3" placeholder="Gross Monthly Income" required>
+            <label for="number3">Gross Monthly Income</label>
+            <div class="invalid-feedback" id="error3">Please enter a valid gross monthly income.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number4" placeholder="Monthly Retirement Contribution" required>
+            <label for="number4">Monthly Retirement Contribution</label>
+            <div class="invalid-feedback" id="error4">Please enter a valid monthly retirement contribution.</div>
+            <p class="info"><i class="bi bi-info-circle-fill"></i> 1/3 of this amount is allocated to the savings component</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number5" placeholder="Savings Component Value" required>
+            <label for="number5">Savings Component Value</label>
+            <div class="invalid-feedback" id="error5">Please enter a valid savings component value.</div>
+            <p class="info"><i class="bi bi-info-circle-fill"></i> Current estimated savings component value</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="number6" placeholder="Requested Withdrawal Amount" required>
+            <label for="number6">Requested Withdrawal Amount</label>
+            <div class="invalid-feedback" id="error6">Please enter a valid withdrawal amount between R2,500 and the savings component value.</div>
+            <p class="alertMsg">Minimum of R2,500. Maximum cannot exceed the amount in your savings component.</p>
+          </div>
+          <div>
+            <button class="btn btn-primary w-20" type="submit">Calculate</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 d-none d-md-block">
+        <div id="previewSection" class="showResult mt-4">
+          <p id="previewText" class="fw-bold"></p>
+          <img id="imgId" class="screenContent d-block w-100" src="assets/two-pot-graph-image.png" alt="Two-Pot Graph">
+          <p id="textId" class="screenContent d-block">See how much estimated tax will be on your withdrawal</p>
+          <button id="confirmButton" class="btn btn-success d-none">Confirm</button>
         </div>
       </div>
     </div>
-  </main>
+  </section> 
+</main>
 
-  <footer id="contact" class="footer">
-    <div class="Container">
+    <footer id="contact" class="footer my-4">
+      <div class="Container">
         <div class="footer-top">
-            <a href="#" class="Logo">
-                <img id="Logo" src="./assets/light-logo.png" alt="Logo" />
-                <span>Two Pot Calculator</span>
-            </a>
-            <ul class="footer-links">
-                <li><a href="#About">About</a></li>
-                <li><a href="https://drive.google.com/uc?export=download&id=1Ek6EyoSAU84Uit7dn_8j3G7B0LfjAnBB" target="_blank">Privacy Policy</a></li>
-                <li><a href="https://drive.google.com/uc?export=download&id=1kcqVLcwMRw-NSY0ycuvpbro4hKuIGwjS" target="_blank">Licensing</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
+          <a href="#" class="Logo">
+            <img id="logo" src="./assets/light-logo.png" alt="Logo" />
+            <span>Two Pot Calculator</span>
+          </a>
+          <ul class="footer-links">
+            <li><a href="#About">About</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&id=1Ek6EyoSAU84Uit7dn_8j3G7B0LfjAnBB" target="_blank">Privacy Policy</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&id=1kcqVLcwMRw-NSY0ycuvpbro4hKuIGwjS" target="_blank">Licensing</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
         </div>
         <hr class="divider">
         <div class="footer-info">
-            <p>Author: CodexTeam</p>
-            <p>Copyright &copy; 2025 Codex. All Rights Reserved.</p>
+          <p>Author: CodexTeam</p>
+          <p>Copyright &copy; 2025 Codex. All Rights Reserved.</p>
         </div>
-       
-    </div>
-</footer>
+      </div>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
 
+  </body>
 </html>
