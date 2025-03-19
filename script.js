@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo"); 
-    const Logo = document.getElementById("Logo");
+   
     const Logo = document.getElementById("Logo");
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navbarNav');
