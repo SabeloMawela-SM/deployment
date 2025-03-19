@@ -316,77 +316,6 @@ body {
     border-bottom: 1px solid #444;
     color: white;
 }
-/*
-.contactCard {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    width: 80vw;
-    height: 71vw; 
-    margin: 0 auto;   
-}
-.contactInfo, .contactForm {
-    flex: 1;
-}
-.contactInfo {
-    padding: 20px;
-}
-.contactInfo h3 {
-    font-size: 16px;
-    color: #777;
-}
-.contactInfo h1 {
-    font-size: 24px;
-    color: #333;
-}
-.contactInfo p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-}
-.contactForm {
-    padding: 50px;
-    background-color: #f7f9fc;
-}
-.contactForm form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.contactForm input, .contactForm textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
-.contactForm textarea {
-    resize: none;
-    height: 100px;
-}
-.contactInfo table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-.contactInfo table th, .contactInfo table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-.contactForm button.submitBtn {
-    padding: 10px;
-    background-color: #6c63ff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.contactForm .radio {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-} */
 
 /* Mobile Styles */
 @media (max-width: 780px) {
@@ -419,6 +348,16 @@ body {
     }
     .nav-buttons {
         gap: 20px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: auto;
+
+    }
+    .cards img {
+        width: 50px;
+        height: auto;
     }
 }
 
