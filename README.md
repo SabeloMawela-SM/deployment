@@ -47,16 +47,16 @@ The **Two-Pot Retirement Estimator** is a web-based tool designed to help users 
 
 - **Team Name:** Codex  
 - **Organization:** Techbridle Foundation  
-- **Project Manager:** [John Smith](https://github.com/JohnSmith)
-- **Mentor:** [Jane Doe](https://github.com/JaneDoe)
-- **Tutor:** [Michael Brown](https://github.com/MichaelBrown)
+- **Project Manager:** [Lindy Heyns](https://github.com/lindy-heyns)
+- **Mentor:** [John Njezi](https://github.com/njezi-techbridle)
+- **Tutor:** [Oluwafemi Otusanya](https://github.com/codewithfemi)
 
 ### Developers (Team Codex)
-- [Alice Johnson](https://github.com/AliceJohnson)
-- [Brian Lee](https://github.com/BrianLee)
-- [Cynthia Adams](https://github.com/CynthiaAdams)
-- [David Kim](https://github.com/DavidKim)
-- [Emily Carter](https://github.com/EmilyCarter)
+- [Khomotso Jonathan Gole](https://github.com/JonathanG1993)
+- [Thavhiwa Khuliso John](https://github.com/KhulisoJohn)
+- [Mmolotsi Ntshabele](https://github.com/Mmolotsi-tech)
+- [Phatheka Sineke](https://github.com/PhathekaSineke)
+- [Sabelo Mawela](https://github.com/SabeloMawela-SM)
 
 ---
 
