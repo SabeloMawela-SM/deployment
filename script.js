@@ -1,15 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
+    const toggle = document.getElementById("Toggle");
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
-    const logo = document.getElementById("logo");
+    const logo = document.getElementById("logo"); 
+   
+    const Logo = document.getElementById("Logo");
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navbarNav');
+    const menuClose = document.getElementById('menuClose');
     const heroImg = document.getElementById("heroImg");
-
     const navbar = document.querySelector(".navbar");
     const previewSection = document.getElementById("previewSection");
     const confirmButton = document.getElementById("confirmButton");
     const imgId = document.getElementById("imgId");
     const textId = document.getElementById("textId");
+
+    // Open the menu
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.add('show');
+        menuClose.style.display = 'block';
+        toggle.style.display = 'block'; // show toggle when menu is open
+        menuToggle.style.display = 'none'; 
+    });
+
+    // Close the menu
+    menuClose.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuClose.style.display = 'none';
+        toggle.style.display = 'none'; // hide toggle when menu is closed
+        menuToggle.style.display = 'block'; 
+    });
+
+    // Close when clicking nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                menuClose.style.display = 'none';
+                //toggle.style.display = 'none';
+                menuToggle.style.display = 'block'; 
+            }
+        });
+    });
+
+
+
+    menuClose.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuClose.style.display = 'none';
+        toggle.style.display = 'none';
+        menuToggle.style.display = 'block'; // Show hamburge
+    }); 
 
     const MIN_WITHDRAWAL = 2500;
     const INPUT_IDS = [1, 2, 3, 4, 5, 6];
@@ -33,10 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.replace("light-mode", "dark-mode");
         navbar.classList.replace("navbar-light", "navbar-dark");
         navbar.classList.replace("bg-light", "bg-dark");
+        navbarNav.classList.replace("bg-light", "bg-dark");
         darkModeToggle.classList.add("d-none");
         lightModeToggle.classList.remove("d-none");
-        heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
+        if (heroImg) {
+            heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
+        };
         logo.src = "./assets/dark-logo.png";
+        Logo.src="./assets/dark-logo.png";
+        Logo.src = "./assets/dark-logo.png";
         localStorage.setItem("theme", "dark");
     }
 
@@ -44,10 +92,15 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.replace("dark-mode", "light-mode");
         navbar.classList.replace("navbar-dark", "navbar-light");
         navbar.classList.replace("bg-dark", "bg-light");
+        navbarNav.classList.replace("bg-dark", "bg-light");
         darkModeToggle.classList.remove("d-none");
         lightModeToggle.classList.add("d-none");
-        heroImg.style.backgroundImage = "url('./assets/hero.png')";
+        if(heroImg){ 
+            heroImg.style.backgroundImage = "url('./assets/hero.png')";
+        };
         logo.src = "./assets/light-logo.png";
+        Logo.src = "./assets/light-logo.png";
+        Logo.src = "./assets/light-logo.png";
         localStorage.setItem("theme", "light");
     }
 
