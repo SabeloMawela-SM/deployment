@@ -82,7 +82,7 @@ The **Two-Pot Retirement Estimator** is a web-based tool designed to help users 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/two-pot-retirement.git
+   git clone https://github.com/Techbridle-Foundation-Org/tf-two-pot-retirement-calculator.git
 
 2. Open the project folder.
 
