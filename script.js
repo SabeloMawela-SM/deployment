@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo"); 
+    const Logo = document.getElementById("Logo");
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navbarNav');
     const menuClose = document.getElementById('menuClose');
@@ -77,8 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
         navbarNav.classList.replace("bg-light", "bg-dark");
         darkModeToggle.classList.add("d-none");
         lightModeToggle.classList.remove("d-none");
-        heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
+        if (heroImg) {
+            heroImg.style.backgroundImage = "url('./assets/hero_processed.png')";
+        };
         logo.src = "./assets/dark-logo.png";
+        Logo.src="./assets/dark-logo.png";
         localStorage.setItem("theme", "dark");
     }
 
@@ -89,8 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
         navbarNav.classList.replace("bg-dark", "bg-light");
         darkModeToggle.classList.remove("d-none");
         lightModeToggle.classList.add("d-none");
-        heroImg.style.backgroundImage = "url('./assets/hero.png')";
+        if(heroImg){ 
+            heroImg.style.backgroundImage = "url('./assets/hero.png')";
+        };
         logo.src = "./assets/light-logo.png";
+        Logo.src = "./assets/light-logo.png";
         localStorage.setItem("theme", "light");
     }
 
