@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const lightModeToggle = document.getElementById("lightModeToggle");
     const logo = document.getElementById("logo"); 
-   
     const Logo = document.getElementById("Logo");
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navbarNav');
@@ -137,25 +136,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            if (id === 6) {
+           /* if (id === 6) {
                 let maxWithdrawal = Number(document.getElementById("number5").value);
                 if (num < MIN_WITHDRAWAL || num > maxWithdrawal) {
                     handleValidation(input, error, `Amount must be between R${MIN_WITHDRAWAL} and R${maxWithdrawal}.`);
                     valid = false;
                     return;
                 }
-            }
+            } */
 
             numbers.push(num);
         });
-
-        if (valid) {
-            document.getElementById("previewText").textContent = `You entered: ${numbers.join(", ")}`;
-            previewSection.classList.remove("d-none");
-            confirmButton.classList.remove("d-none");
-            imgId.classList.remove("d-none");
-            textId.classList.remove("d-none");
-        }
     }
 
     document.getElementById("retirementForm")?.addEventListener("submit", (event) => {
@@ -163,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         validateAndPreview();
     });
 
-    confirmButton?.addEventListener("click", () => {
+  /*  confirmButton?.addEventListener("click", () => {
         alert("Confirmed! Proceeding...");
-    });
+    });*/
 });
