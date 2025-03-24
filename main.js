@@ -36,9 +36,9 @@ form.addEventListener("submit", (e) => {
     let yearsToRetirement = retirementAge - currentAge;
     let inflationRate = 0.06;
     let returnRate = 0.08;
-    let estimatedTaxRate = 0.26;
-    //const estimatedTransition = 500;
-    let estimatedTax = (withdrawalAmount - monthlyIncome * Math.pow(1 + inflationRate, 1)) * estimatedTaxRate;
+    let estimatedTaxRate = (monthlyIncome > 25000 || withdrawalAmount > 100000) ? 0.35 : 0.26;
+    const estimatedTransition = 500;
+    let estimatedTax = (withdrawalAmount -estimatedTransition) * estimatedTaxRate
     let netWithdrawal = withdrawalAmount - estimatedTax;
 
     // Future value calculation with inflation and growth
