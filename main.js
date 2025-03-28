@@ -38,7 +38,7 @@ form.addEventListener("submit", (e) => {
     let returnRate = 0.08;
     let estimatedTaxRate = (monthlyIncome > 25000 || withdrawalAmount > 100000) ? 0.35 : 0.26;
     const estimatedTransition = 500;
-    let estimatedTax = (withdrawalAmount - estimatedTransition) * estimatedTaxRate;
+    let estimatedTax = (withdrawalAmount -estimatedTransition) * estimatedTaxRate
     let netWithdrawal = withdrawalAmount - estimatedTax;
 
     // Future value calculation with inflation and growth
@@ -96,10 +96,7 @@ form.addEventListener("submit", (e) => {
                 <div class="progress-bar ${getProgressColor(futureAfterPercent)}" role="progressbar" style="width: ${futureAfterPercent}%"></div>
             </div>
         </div>
-        <p class="mt-3 text-muted small center">
-            This calculation has been made using 
-            <a href="#" data-bs-toggle="modal" data-bs-target="#assumptionsModal">assumptions</a>.
-        </p>
+        <p class="mt-3 text-muted small center">This calculation has been made using <a href="#">assumptions</a>.</p>
     `;
 
     const results = document.getElementById("resultsContainer");
